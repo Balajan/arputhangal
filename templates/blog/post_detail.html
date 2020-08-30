@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+	</head>
+	<body class="body">
+			
+			{% csrf_token %}
+		<div class="new"> 
+			<h1>{{post.title|safe}}<h1>
+			<h2>{{post.author|safe}}, {{post.date|safe}}<h2>
+			<p>{{ post.body|safe }}</p> </div>
+	</body>
